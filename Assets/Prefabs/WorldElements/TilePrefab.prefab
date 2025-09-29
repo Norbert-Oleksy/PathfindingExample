@@ -213,6 +213,11 @@ MonoBehaviour:
   _traversableMat: {fileID: 2100000, guid: 6be3160752f962f42b4d993ec4fc1498, type: 2}
   _obstacleMat: {fileID: 2100000, guid: 78035a0c11c031145b5a7d8e6b0e2b52, type: 2}
   _coverMat: {fileID: 2100000, guid: e458c33935fc7134391c48d8021e7fd3, type: 2}
+  _highlight: {fileID: 9182761341568371799}
+  _hlMoveMat: {fileID: 2100000, guid: 580ccf05c5247be49adccb144e86cba5, type: 2}
+  _hlMoveOffRangeMat: {fileID: 2100000, guid: d671eccd9f02bcf47860ca1fe068da2e, type: 2}
+  _hlAttackMat: {fileID: 2100000, guid: 0f07de32dc097ce448605e0e0e848341, type: 2}
+  _hlAttackOffRangeMat: {fileID: 2100000, guid: 73ffe0a9d0a00204c8cedc1acbc9699a, type: 2}
 --- !u!1 &4374646848681484492
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +555,7 @@ GameObject:
   - component: {fileID: 3880489888301222886}
   - component: {fileID: 9133984630978189954}
   m_Layer: 0
-  m_Name: Filling Cube
+  m_Name: Highlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

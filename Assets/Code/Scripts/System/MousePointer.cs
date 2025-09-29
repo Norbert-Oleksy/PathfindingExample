@@ -28,6 +28,10 @@ public class MousePointer : MonoBehaviour
 
         if (SystemManager.Instance.CurrentStage == SystemStage.Placement)
             SystemManager.Instance.Menu.PlacementSection.SpawnEntitie(tile);
+
+        if (SystemManager.Instance.CurrentStage == SystemStage.Play)
+            SystemManager.Instance.CurrentPlayer.HandleTileClick(tile);
+
     }
     #endregion
 

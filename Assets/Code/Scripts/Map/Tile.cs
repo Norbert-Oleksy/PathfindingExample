@@ -9,6 +9,13 @@ public class Tile : MonoBehaviour
     [SerializeField] private Material _traversableMat;
     [SerializeField] private Material _obstacleMat;
     [SerializeField] private Material _coverMat;
+    [Space(10)]
+    [Header("Highlight")]
+    [SerializeField] private GameObject _highlight;
+    [SerializeField] private Material _hlMoveMat;
+    [SerializeField] private Material _hlMoveOffRangeMat;
+    [SerializeField] private Material _hlAttackMat;
+    [SerializeField] private Material _hlAttackOffRangeMat;
     #endregion
 
     #region Variables
@@ -45,11 +52,30 @@ public class Tile : MonoBehaviour
     public void PlaceEntitie(Entitie unit)
     {
         CurrentEntitie = unit;
+        ClearHighlight();
     }
 
     public void ClearPosition()
     {
         CurrentEntitie = null;
+    }
+
+    public void HighlightTile(string hlType)
+    {
+        _highlight.SetActive(true);
+        _highlight.GetComponent<Renderer>().sharedMaterial = hlType switch
+        {
+            "move" => _hlMoveMat,
+            "moveOutOfRange" => _hlMoveOffRangeMat,
+            "attack" => _hlAttackMat,
+            "attackOutOfRange" => _hlAttackOffRangeMat,
+            _ => _hlMoveMat
+        };
+    }
+
+    public void ClearHighlight()
+    {
+        _highlight.SetActive(false);
     }
 
     #endregion

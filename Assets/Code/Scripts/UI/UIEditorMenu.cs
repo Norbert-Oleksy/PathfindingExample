@@ -30,6 +30,8 @@ public class UIEditorMenu : MonoBehaviour
     public void ChangeSystemStage(int stage)
     {
         SystemManager.Instance.ChangeState((SystemStage)stage);
+
+        Debug.Log("Current Stage: " + SystemManager.Instance.CurrentStage);
     }
     #endregion
 

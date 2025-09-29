@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MapManager : MonoBehaviour
@@ -79,5 +80,26 @@ public class MapManager : MonoBehaviour
         int y = Mathf.RoundToInt(local.z);
         return GetTile(x, y);
     }
+
+    public List<Tile> GetNeighbours(Tile tile)
+    {
+        List<Tile> neighbours = new List<Tile>();
+        (int x, int y) = tile.Position;
+
+        if (y + 1 < _tiles.GetLength(1))
+            neighbours.Add(_tiles[x, y + 1]);
+
+        if (y - 1 >= 0)
+            neighbours.Add(_tiles[x, y - 1]);
+
+        if (x + 1 < _tiles.GetLength(0))
+            neighbours.Add(_tiles[x + 1, y]);
+
+        if (x - 1 >= 0)
+            neighbours.Add(_tiles[x - 1, y]);
+
+        return neighbours;
+    }
+
     #endregion
 }
