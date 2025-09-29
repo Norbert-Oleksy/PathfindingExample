@@ -7,7 +7,11 @@ public class UIEditorMenu : MonoBehaviour
 {
     #region SerializeFields
     [SerializeField] private List<Button> _navigationButtons;
+    [SerializeField] private UIPaintSection _paintSection;
+    #endregion
 
+    #region References
+    public UIPaintSection PaintSection => _paintSection;
     #endregion
 
     #region Methods
@@ -19,6 +23,11 @@ public class UIEditorMenu : MonoBehaviour
         {
             b.GetComponent<Image>().color = Color.gray;
         }
+    }
+
+    public void ChangeSystemStage(int stage)
+    {
+        SystemManager.Instance.ChangeState((SystemStage)stage);
     }
     #endregion
 

@@ -67,5 +67,15 @@ public class MapManager : MonoBehaviour
 
         return _tiles[x, y];
     }
+
+    public Tile GetTileAtWorldPosition(Vector3 worldPosition)
+    {
+        if (_gridParent == null || _tiles == null) return null;
+
+        Vector3 local = _gridParent.InverseTransformPoint(worldPosition);
+        int x = Mathf.RoundToInt(local.x);
+        int y = Mathf.RoundToInt(local.z);
+        return GetTile(x, y);
+    }
     #endregion
 }
