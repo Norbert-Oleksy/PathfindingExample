@@ -58,6 +58,8 @@ public class MapManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        SystemManager.Instance.CurrentPlayer?.DestroyEntitie();
+        SystemManager.Instance.CurrentEnemy?.DestroyEntitie();
     }
 
     public Tile GetTile(int x, int y)
