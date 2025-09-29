@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider), typeof(Renderer))]
@@ -14,6 +15,9 @@ public class Tile : MonoBehaviour
     public TileType Type {  get; private set; }
     public (int X, int Y) Position { get; private set; }
     private Renderer _render;
+
+    public Entitie CurrentEntitie { get; private set; }
+    public bool IsOccupied => CurrentEntitie != null;
     #endregion
 
     #region Methods
@@ -36,6 +40,16 @@ public class Tile : MonoBehaviour
             TileType.Cover => _coverMat,
             _ => _traversableMat
         };
+    }
+
+    public void PlaceEntitie(Entitie unit)
+    {
+        CurrentEntitie = unit;
+    }
+
+    public void ClearPosition()
+    {
+        CurrentEntitie = null;
     }
 
     #endregion

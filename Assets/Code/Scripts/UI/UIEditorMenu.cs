@@ -8,10 +8,12 @@ public class UIEditorMenu : MonoBehaviour
     #region SerializeFields
     [SerializeField] private List<Button> _navigationButtons;
     [SerializeField] private UIPaintSection _paintSection;
+    [SerializeField] private UIPlacementSection _placementSection;
     #endregion
 
     #region References
     public UIPaintSection PaintSection => _paintSection;
+    public UIPlacementSection PlacementSection => _placementSection;
     #endregion
 
     #region Methods

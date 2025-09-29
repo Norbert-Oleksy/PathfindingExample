@@ -25,6 +25,9 @@ public class MousePointer : MonoBehaviour
     {
         if(SystemManager.Instance.CurrentStage == SystemStage.Paint)
             SystemManager.Instance.Menu.PaintSection.PaintTile(tile);
+
+        if (SystemManager.Instance.CurrentStage == SystemStage.Placement)
+            SystemManager.Instance.Menu.PlacementSection.SpawnEntitie(tile);
     }
     #endregion
 

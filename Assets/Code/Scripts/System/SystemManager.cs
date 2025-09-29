@@ -11,6 +11,8 @@ public class SystemManager : MonoBehaviour
 
     #region Variables
     public SystemStage CurrentStage { get; private set; }
+    public Player CurrentPlayer { get; private set; }
+    public Enemy CurrentEnemy { get; private set; }
     #endregion
 
     #region Methods
@@ -18,6 +20,22 @@ public class SystemManager : MonoBehaviour
     {
         CurrentStage = newStage;
     }
+
+    public void SetPlayer(Player newPlayer)
+    {
+        if (CurrentPlayer != null) CurrentPlayer.DestroyEntitie();
+        CurrentPlayer = newPlayer;
+    }
+
+    public void ClearPlayer() => CurrentPlayer = null;
+
+    public void SetEnemy(Enemy newEnemy)
+    {
+        if (CurrentEnemy != null) CurrentEnemy.DestroyEntitie();
+        CurrentEnemy = newEnemy;
+    }
+
+    public void ClearEnemy() => CurrentEnemy = null;
     #endregion
 
     #region Unity-API

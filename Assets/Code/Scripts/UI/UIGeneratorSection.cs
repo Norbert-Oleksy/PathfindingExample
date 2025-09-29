@@ -17,7 +17,7 @@ public class UIGeneratorSection : MonoBehaviour
 
         if(width <= 0 || height <= 0)
         {
-            Debug.Log("width and height must be greater then 0");
+            Debug.LogWarning("width and height must be greater then 0");
             return;
         }
 

@@ -21,7 +21,10 @@ public class UIPaintSection : MonoBehaviour
     }
 
     public void PaintTile(Tile tile)
-    {
+    {        
+        if (tile.IsOccupied && CurrentType != TileType.Traversable)
+            tile.CurrentEntitie.DestroyEntitie();
+
         tile.SetType(CurrentType);
     }
     #endregion
