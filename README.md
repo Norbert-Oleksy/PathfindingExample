@@ -1,4 +1,4 @@
-# Pathfinding System 🧭
+# Pathfinding system 🧭
 
 > **A tactical grid-based movement system featuring custom pathfinding algorithms (A*, BFS) and a runtime level editor.**
 
@@ -10,7 +10,7 @@
 ---
 
 ### 📝 About
-**Pathfinding System** is a technical demo implementing turn-based tactical movement logic on a square grid. The core objective was to create a robust architecture where units navigate through different terrain types (traversable, obstacles, covers) while respecting movement and attack ranges.
+**Pathfinding system** is a technical demo implementing turn-based tactical movement logic on a square grid. The core objective was to create a robust architecture where units navigate through different terrain types (traversable, obstacles, covers) while respecting movement and attack ranges.
 
 The project features a fully functional **runtime map editor**, allowing users to generate grids, paint terrain types, and place units to test pathfinding behavior in real-time.
 
