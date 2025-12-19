@@ -1,6 +1,6 @@
 # Pathfinding system 🧭
 
-> **A tactical grid-based movement system featuring custom pathfinding algorithms (A*, BFS) and a runtime level editor.**
+> **A tactical grid-based movement system featuring custom pathfinding algorithms (A\*, BFS) and a runtime level editor.**
 
 ---
 
@@ -31,7 +31,7 @@ The system focuses on efficiency and using modern C# features.
     Implemented for calculating attack ranges and finding optimal firing positions. Unlike A*, BFS naturally explores the grid layer-by-layer (flood fill), making it superior for finding *all* reachable tiles within a specific range.
 
 * **Dynamic grid management:**
-    The grid system is designed for runtime manipulation. Tile states can be modified on the fly, immediately updating both the visual representation (Materials) and the internal pathfinding data without scene reloads.
+    The grid system is designed for runtime manipulation. Tile states can be modified on the fly, immediately updating both the visual representation (materials) and the internal pathfinding data without scene reloads.
 
 * **Modern C# Syntax:**
     The codebase utilizes modern C# features such as **Tuples** for coordinate handling and **Switch Expressions** for clean state management logic.
